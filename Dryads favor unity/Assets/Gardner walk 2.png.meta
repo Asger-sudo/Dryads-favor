@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3c00aafe95682834eacc7d14b7417858
+guid: cdab35e9c92896a45afe0cd8cc5d43c0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8283450813873630081
-    second: Gardner walk 1png_0
+      213: -5770103369025087586
+    second: Gardner walk 2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Gardner walk 1png_0
+      name: Gardner walk 2_0
       rect:
         serializedVersion: 2
-        x: 22
-        y: 30
+        x: 43
+        y: 22
         width: 341
-        height: 522
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f7454a45f554b0d80800000000000000
-      internalID: -8283450813873630081
+      spriteID: e9799f3ae897cefa0800000000000000
+      internalID: -5770103369025087586
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Gardner walk 1png_0: -8283450813873630081
+      Gardner walk 2_0: -5770103369025087586
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
