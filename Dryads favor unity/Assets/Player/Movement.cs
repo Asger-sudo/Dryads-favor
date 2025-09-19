@@ -64,10 +64,10 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump") && grounded)
         {
-            body.linearVelocity = new Vector2(body.linearVelocity.x, yInput * jumpspeed);
+            body.linearVelocity = new Vector2(body.linearVelocity.x, jumpspeed);
         }
-       
     }
+
     void CheckGround()
     {
         grounded = Physics2D.OverlapAreaAll(GroundCheck.bounds.min, GroundCheck.bounds.max, groundMask).Length > 0;
