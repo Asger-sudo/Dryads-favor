@@ -2,17 +2,25 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
+using System.Runtime.InteropServices;
 
 public class Movement : MonoBehaviour
 {
-    public Rigidbody2D body;
-    public float speed;
-    [Range(0f, 1f)]
-
-    public float groundDecay;
-    public bool grounded;
-    public Collider2D GroundCheck;
+     public Rigidbody2D body;
+    public BoxCollider2D GroundCheck;
     public LayerMask groundMask;
+
+
+    public float acceleration; 
+    [Range(0f, 1f)]
+    public float groundSpeed;
+    public float groundDecay;
+
+
+    public float jumpspeed;
+    
+
+    public bool grounded;
     float xInput;
     float yInput;
 
@@ -20,37 +28,46 @@ public class Movement : MonoBehaviour
     {
 
     }
-
-
-
-
     void Update()
     {
-        GetInput();
-        MoveWithInput();
+        CheckInput();
+        HandleJump();
 
     }
     void FixedUpdate()
     {
         CheckGround();
+        MoveWithInput();
         ApplyFriction();
-
+       
     }
-    void GetInput()
+    void CheckInput()
     {
         xInput = Input.GetAxis("Horizontal");
         yInput = Input.GetAxis("Vertical");
     }
     void MoveWithInput()
     {
-
         if (math.abs(xInput) > 0)
-        { body.linearVelocity = new Vector2(xInput * speed, body.linearVelocity.y); }
+        {
+            float increment = xInput * acceleration;
+            float newspeed = Mathf.Clamp(body.linearVelocity.x + increment, -groundSpeed, groundSpeed);
+            body.linearVelocity = new Vector2(newspeed, body.linearVelocity.y);
 
-        if (math.abs(yInput) > 0 && grounded)
-        { body.linearVelocity = new Vector2(body.linearVelocity.x, yInput * speed); }
+            float direction = Mathf.Sign(xInput);
+            transform.localScale = new Vector3(direction, 1, 1);
+        }
+
     }
 
+    void HandleJump()
+    {
+        if (Input.GetButtonDown("Jump") && grounded)
+        {
+            body.linearVelocity = new Vector2(body.linearVelocity.x, yInput * jumpspeed);
+        }
+       
+    }
     void CheckGround()
     {
         grounded = Physics2D.OverlapAreaAll(GroundCheck.bounds.min, GroundCheck.bounds.max, groundMask).Length > 0;
@@ -58,7 +75,7 @@ public class Movement : MonoBehaviour
 
     void ApplyFriction()
     {
-        if (grounded && xInput == 0 && yInput == 0)
+        if (grounded && xInput == 0 && body.linearVelocity.y <=0)
         {body.linearVelocity *= groundDecay; }
        
     }
