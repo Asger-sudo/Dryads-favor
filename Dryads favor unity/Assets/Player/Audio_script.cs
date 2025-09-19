@@ -5,7 +5,7 @@ public class AudioManager : MonoBehaviour
 {
     public enum SoundType
     {
-        Jump,
+        Death,
         Powerup,
         Shoot,
         Music_Menu,
