@@ -12,7 +12,7 @@ public class Movement : MonoBehaviour
 
 
     public float acceleration; 
-    [Range(0f, 1f)]
+    [Range(0f, 5f)]
     public float groundSpeed;
     public float groundDecay;
 
