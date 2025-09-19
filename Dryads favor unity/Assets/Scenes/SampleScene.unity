@@ -129,7 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 105167582}
   - component: {fileID: 105167581}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -268,7 +268,7 @@ GameObject:
   m_Component:
   - component: {fileID: 295377443}
   - component: {fileID: 295377444}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -423,7 +423,7 @@ SpriteRenderer:
   m_Size: {x: 3.69, y: 5.97}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &440258655
@@ -606,7 +606,7 @@ GameObject:
   m_Component:
   - component: {fileID: 619088005}
   - component: {fileID: 619088004}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -991,13 +991,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Movement
   body: {fileID: 1191246020}
-  speed: 3
-  groundDecay: 0
+  groundSpeed: 1.5
+  jumpSpeed: 3.5
+  acceleration: 1
+  groundDecay: 0.212
   grounded: 0
   GroundCheck: {fileID: 1272489251}
   groundMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 0
 --- !u!1 &1241984764
 GameObject:
   m_ObjectHideFlags: 0
@@ -1098,7 +1100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1265458333}
   - component: {fileID: 1265458334}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1287,7 +1289,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1673927659}
   - component: {fileID: 1673927660}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1410,7 +1412,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1765696331}
   - component: {fileID: 1765696332}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
