@@ -4,29 +4,28 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 
 {
+    SpriteRenderer spriteRenderer;
     Vector2 startPos;
-    public SpriteRenderer spriteRenderer;
 
     private void Awake()
     {
-        
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
     private void Start()
     {
         startPos = transform.position;
     }
 
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Torne"))
         {
-            Dø();
+            Die();
         }
     }
 
 
-    void Dø()
+    void Die()
     {
         StartCoroutine(Respawn(0.5f));
     }
@@ -38,5 +37,15 @@ public class GameController : MonoBehaviour
         transform.position = startPos;
         spriteRenderer.enabled = true;
     }
-   
+
+
+
+
+
+
+
+
+
+
+
 }
