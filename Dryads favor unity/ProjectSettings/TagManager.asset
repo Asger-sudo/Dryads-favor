@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Torne
   - Kasse
+  - Destructible
+  - Box
   layers:
   - Default
   - TransparentFX
@@ -17,7 +19,7 @@ TagManager:
   - Ground
   - Wall
   - Torne
-  - 
+  - "\xF8del\xE6g"
   - 
   - 
   - 
