@@ -55,7 +55,7 @@ public class Movement : MonoBehaviour
             body.linearVelocity = new Vector2(newspeed, body.linearVelocity.y);
 
             float direction = Mathf.Sign(xInput);
-            transform.localScale = new Vector3(direction* 0.1f,0.1f, 1);
+            transform.localScale = new Vector3(direction* 0.15f,0.15f, 1);
         }
 
     }
