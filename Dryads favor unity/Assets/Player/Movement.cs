@@ -9,6 +9,7 @@ public class Movement : MonoBehaviour
      public Rigidbody2D body;
     public BoxCollider2D GroundCheck;
     public LayerMask groundMask;
+    public Animator animation;
 
 
     public float acceleration; 
@@ -30,6 +31,7 @@ public class Movement : MonoBehaviour
     }
     void Update()
     {
+        animation.SetFloat("Speed", Mathf.Abs(xInput));
         CheckInput();
         HandleJump();
 
