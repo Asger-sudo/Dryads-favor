@@ -9,6 +9,7 @@ public class Movement : MonoBehaviour
      public Rigidbody2D body;
     public BoxCollider2D GroundCheck;
     public LayerMask groundMask;
+    public Animator animator;
 
 
     public float acceleration; 
@@ -30,6 +31,7 @@ public class Movement : MonoBehaviour
     }
     void Update()
     {
+        animator.SetFloat("Speed", Mathf.Abs(xInput));
         CheckInput();
         HandleJump();
 
@@ -48,6 +50,7 @@ public class Movement : MonoBehaviour
     }
     void MoveWithInput()
     {
+       
         if (math.abs(xInput) > 0)
         {
             float increment = xInput * acceleration;
@@ -56,6 +59,7 @@ public class Movement : MonoBehaviour
 
             float direction = Mathf.Sign(xInput);
             transform.localScale = new Vector3(direction* 0.15f,0.15f, 1);
+            
         }
 
     }
