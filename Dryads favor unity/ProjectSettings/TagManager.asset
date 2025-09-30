@@ -8,6 +8,7 @@ TagManager:
   - Kasse
   - Destructible
   - Box
+  - Teleporter
   layers:
   - Default
   - TransparentFX
