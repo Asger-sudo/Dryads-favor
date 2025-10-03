@@ -274,11 +274,14 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f34046ab8e118014d8f4a4ed21764e9a, type: 3}
+<<<<<<< Updated upstream
 --- !u!1 &200769693 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 374713920297315069, guid: a7163b2516eabbe4eab96e837c614609, type: 3}
   m_PrefabInstance: {fileID: 1816853347}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> Stashed changes
 --- !u!1 &224463888
 GameObject:
   m_ObjectHideFlags: 0
@@ -1992,8 +1995,13 @@ Tilemap:
   - first: {x: 0, y: 0, z: 0}
     second:
       serializedVersion: 2
+<<<<<<< Updated upstream
       m_TileIndex: 3
       m_TileSpriteIndex: 3
+=======
+      m_TileIndex: 6
+      m_TileSpriteIndex: 6
+>>>>>>> Stashed changes
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -6117,14 +6125,23 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 0cf252c86fb34d04f9b2db902ed45382, type: 2}
   - m_RefCount: 8
     m_Data: {fileID: 11400000, guid: ee9c90db53b955e4d80673bec1f8949b, type: 2}
+<<<<<<< Updated upstream
   - m_RefCount: 511
+=======
+  - m_RefCount: 510
+>>>>>>> Stashed changes
     m_Data: {fileID: 11400000, guid: ab1c2178ef9e94a4a8549d6161146134, type: 2}
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+<<<<<<< Updated upstream
   - m_RefCount: 0
     m_Data: {fileID: 0}
+=======
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 95fc8f012cec8d847bf55761a230f0ce, type: 2}
+>>>>>>> Stashed changes
   m_TileSpriteArray:
   - m_RefCount: 47
     m_Data: {fileID: -5157364465992773656, guid: 0461ab5cf5768094b8910d6af9bf0e59, type: 3}
@@ -6132,14 +6149,23 @@ Tilemap:
     m_Data: {fileID: -918052672, guid: 0461ab5cf5768094b8910d6af9bf0e59, type: 3}
   - m_RefCount: 8
     m_Data: {fileID: -2125366011, guid: 0461ab5cf5768094b8910d6af9bf0e59, type: 3}
+<<<<<<< Updated upstream
   - m_RefCount: 511
+=======
+  - m_RefCount: 510
+>>>>>>> Stashed changes
     m_Data: {fileID: -3593292437018446671, guid: 0461ab5cf5768094b8910d6af9bf0e59, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+<<<<<<< Updated upstream
   - m_RefCount: 0
     m_Data: {fileID: 0}
+=======
+  - m_RefCount: 1
+    m_Data: {fileID: -1043689758074117506, guid: 97b52e5dac7bae6458ebccbcd1990b97, type: 3}
+>>>>>>> Stashed changes
   m_TileMatrixArray:
   - m_RefCount: 573
     m_Data:
@@ -6162,6 +6188,11 @@ Tilemap:
   m_TileColorArray:
   - m_RefCount: 573
     m_Data: {r: 1, g: 1, b: 1, a: 1}
+<<<<<<< Updated upstream
+=======
+  - m_RefCount: 0
+    m_Data: {r: 4.5e-44, g: 4.5e-44, b: 4.5e-44, a: 4.5e-44}
+>>>>>>> Stashed changes
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -7205,7 +7236,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5533949ca81c48443a3d3542bb9eaefb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DestructibleManager
+<<<<<<< Updated upstream
   destructiblePrefab: {fileID: 200769693}
+=======
+>>>>>>> Stashed changes
 --- !u!1001 &894761181
 PrefabInstance:
   m_ObjectHideFlags: 0
