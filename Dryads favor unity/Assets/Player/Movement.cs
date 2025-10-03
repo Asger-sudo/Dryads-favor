@@ -40,17 +40,15 @@ public class Movement : MonoBehaviour
     {
         CheckGround();
         MoveWithInput();
-        ApplyFriction();
        
     }
     void CheckInput()
     {
-        xInput = Input.GetAxis("Horizontal");
-        yInput = Input.GetAxis("Vertical");
+        xInput = Input.GetAxisRaw("Horizontal");
+        yInput = Input.GetAxisRaw("Vertical");
     }
     void MoveWithInput()
     {
-       
         if (math.abs(xInput) > 0)
         {
             float increment = xInput * acceleration;
@@ -58,10 +56,12 @@ public class Movement : MonoBehaviour
             body.linearVelocity = new Vector2(newspeed, body.linearVelocity.y);
 
             float direction = Mathf.Sign(xInput);
-            transform.localScale = new Vector3(direction* 0.15f,0.15f, 1);
-            
+            transform.localScale = new Vector3(direction * 0.15f, 0.15f, 1);
         }
-
+        else if (grounded)
+        {
+            body.linearVelocity = new Vector2(0, body.linearVelocity.y);
+        }
     }
 
     void HandleJump()
@@ -76,12 +76,6 @@ public class Movement : MonoBehaviour
     {
         grounded = Physics2D.OverlapAreaAll(GroundCheck.bounds.min, GroundCheck.bounds.max, groundMask).Length > 0;
     }
-
-    void ApplyFriction()
-    {
-        if (grounded && xInput == 0 && body.linearVelocity.y <=0)
-        {body.linearVelocity *= groundDecay; }
-       
-    }
 }
+
 

@@ -1,0 +1,5 @@
+void CheckInput()
+{
+    xInput = Input.GetAxisRaw("Horizontal");
+    yInput = Input.GetAxisRaw("Vertical");
+}
