@@ -7254,6 +7254,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 899376596485246777, guid: 3c00155d995437149bf9229c7375d79d, type: 3}
+      propertyPath: groundDecay
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 899376596485246777, guid: 3c00155d995437149bf9229c7375d79d, type: 3}
       propertyPath: groundSpeed
       value: 2.5
       objectReference: {fileID: 0}

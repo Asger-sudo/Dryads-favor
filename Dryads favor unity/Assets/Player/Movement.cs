@@ -74,7 +74,26 @@ public class Movement : MonoBehaviour
 
     void CheckGround()
     {
-        grounded = Physics2D.OverlapAreaAll(GroundCheck.bounds.min, GroundCheck.bounds.max, groundMask).Length > 0;
+        grounded = false;
+        Collider2D[] hits = Physics2D.OverlapBoxAll(GroundCheck.bounds.center, GroundCheck.bounds.size, 0f, groundMask);
+
+        if (hits.Length > 0)
+        {
+            grounded = true;
+        }
+        else
+        {
+            
+            Collider2D[] allHits = Physics2D.OverlapBoxAll(GroundCheck.bounds.center, GroundCheck.bounds.size, 0f);
+            foreach (var hit in allHits)
+            {
+                if (hit.GetComponent<Destructible>() != null)
+                {
+                    grounded = true;
+                    break;
+                }
+            }
+        }
     }
 }
 
