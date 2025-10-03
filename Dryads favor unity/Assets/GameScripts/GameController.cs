@@ -2,7 +2,6 @@ using System.Collections;
 using UnityEngine;
 
 public class GameController : MonoBehaviour
-
 {
     SpriteRenderer spriteRenderer;
     Vector2 startPos;
@@ -24,7 +23,6 @@ public class GameController : MonoBehaviour
         }
     }
 
-
     void Die()
     {
         StartCoroutine(Respawn(0.5f));
@@ -38,14 +36,8 @@ public class GameController : MonoBehaviour
         spriteRenderer.enabled = true;
     }
 
-
-
-
-
-
-
-
-
-
-
+    public void SetRespawnPoint(Vector2 pos)
+    {
+        startPos = pos;
+    }
 }

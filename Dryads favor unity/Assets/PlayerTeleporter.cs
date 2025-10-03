@@ -3,7 +3,7 @@ using UnityEngine;
 public class playerTeleport : MonoBehaviour
 {
     private GameObject currentTeleporter;
-    private float lastTeleportTime = -10f; // Start så man kan teleportere med det samme
+    private float lastTeleportTime = -10f;
     public float teleportCooldown = 10f;
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -16,6 +16,13 @@ public class playerTeleport : MonoBehaviour
                 Debug.Log("Teleporting!");
                 transform.position = currentTeleporter.GetComponent<Teleporter>().GetDestination().position;
                 lastTeleportTime = Time.time;
+
+                // Sæt nyt respawn-point
+                var gc = GetComponent<GameController>();
+                if (gc != null)
+                {
+                    gc.SetRespawnPoint(transform.position);
+                }
             }
         }
     }
