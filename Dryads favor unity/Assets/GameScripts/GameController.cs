@@ -41,6 +41,10 @@ public class GameController : MonoBehaviour
         startPos = pos;
     }
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 =======
 
 >>>>>>> Stashed changes
